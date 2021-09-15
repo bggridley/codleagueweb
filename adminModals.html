@@ -1,0 +1,168 @@
+<div class="modal fade popupModal" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="popupModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="popupModalLabel">Edit Player</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body" id="popupModalBody">
+
+
+
+                <form class="form-inline row">
+                    <div class="form-group col-xs mx-3">
+                        <input type="text" class="form-control" id="firstname_popup" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group col-xs mx-3">
+                        <input type="text" class="form-control" id="lastname_popup" placeholder="Last Name">
+                    </div>
+
+                    <div class="form-group col-xs mx-3">
+                        <label class="my-1 mr-2" for="popupMap">Team</label>
+                        <select class="custom-select my-1 mr-sm-2" id="popupTeams">
+
+                        </select>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal"
+                    id="popupModalDelete">Delete</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="popupModalSave">Save
+                    changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Modal-->
+</div>
+
+
+<!-- MODAL-->
+
+<div class="modal fade teamModal" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xs" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="teamModalLabel">Edit Team</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body" id="teamModalBody">
+
+                <p>Deleting this team is permanent and cannot be undone. Would you like to continue?</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal"
+                    id="teamModalDelete">Delete</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Modal-->
+
+<!-- MODAL-->
+
+<div class="modal fade matchModal" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="overflow-y: initial" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="matchModalLabel">New Match</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body" id="matchModalBody">
+                <div class="container">
+                    <form class="form-inline mb-3" id="editMatchForm">
+
+
+                        <label class="my-1 mr-2">Team One</label>
+                        <div class="form-group mx-3 row">
+
+                            <div class = "col-xs-12">
+                                <input type="number" min=0 style="width:70px" class="form-control" id="team1points">
+                            </div>
+                            <select class="custom-select my-1 mr-sm-2 col-xs-2" id="team1">
+                            </select>
+                        </div>
+
+                        <label class="my-1 mr-2">Team Two</label>
+                        <div class="form-group mx-3 row">
+
+                            <div class = "col-xs-12">
+                                <input type="number" min=0 style="width:70px" class="form-control" id="team2points">
+                            </div>
+                            <select class="custom-select my-1 mr-sm-2 col-xs-2" id="team2">
+                            </select>
+                        </div>
+
+                        <div class="form-group mx-3">
+                            <label class="my-1 mr-2">Of</label>
+                            <select class="custom-select my-1 mr-sm-2" id="bestOf">
+                                <option selected>3</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mx-3">
+                            <label class="my-1 mr-2">Game</label>
+                            <select class="custom-select my-1 mr-sm-2" id="game">
+
+                            </select>
+                        </div>
+                    </form>
+
+                    <form class="form-inline mb-3">
+                        <div class="form-group">
+                            <label class="my-1 mr-2">Map</label>
+                            <select class="custom-select my-1 mr-sm-2" id="map">
+
+                            </select>
+                        </div>
+
+                        <div class="form-group mx-3">
+                            <label class="my-1 mr-2">Mode</label>
+                            <select class="custom-select my-1 mr-sm-2" id="mode">
+
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+                <div id="gameTable" style="height:300px; overflow-y:auto">
+                    <!-- Table goes here. insert table one and two.-->
+                    <div id="gameTable1" class="container-fluid"> </div>
+
+                    <div id="gameTable2" class="container-fluid"> </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal"
+                    id="matchModalDelete">Delete</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveMatchModal">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
